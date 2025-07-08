@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>
+            java script project
+        </title>
+        <style>
+            body{
+                background-color: black;
+                color: red;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            input{
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            div{
+                background-color: white;
+                width: 450px;
+                margin-left: 35%;
+                padding: 20px;
+            }
+        </style>
+        <body>
+            <div>
+            <h1>
+                Marksheet
+            </h1>
+            <p>Name of the student</p>
+            <input type="text" placeholder="enter the name of the student" id="name">
+            <p>Marks of english</p>
+            <input type="number" placeholder="enter the marks of English" id="a">
+            <p>Marks of Hindi</p>
+            <input type="number" placeholder="enter the marks of English" id="b">
+            <p>Marks of physics</p>
+            <input type="number" placeholder="enter the marks of English" id="c">
+            <p>Marks of chemistry</p>
+            <input type="number" placeholder="enter the marks of English" id="d">
+            <p>Marks of Maths</p>
+            <input type="number" placeholder="enter the marks of English" id="e"><br>
+            <input type="button" value="calculate" onclick="run()">
+            <div style="width: 130px;">
+            <table border="1" style="display: none;" id="t">
+                <tr>
+                    <th>Name</th>
+                    <td id="f"></td>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <td id="g"></td>
+                </tr>
+                <tr>
+                   <th>Hindi</th>
+                   <td id="h"></td>
+                </tr>
+                <tr>
+                    <th>Maths</th>
+                    <td id="i"></td>
+                </tr>
+                <tr>
+                    <th>Physics</th>
+                    <td id="j"></td>
+                </tr>
+                <tr>
+                    <th>Chemistry</th>
+                    <td id="k"></td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td id="l"></td>
+                </tr>
+                <tr>
+                    <th>percentage</th>
+                    <td id="m"></td>
+                </tr>
+             </table>
+             </div>
+            <script>
+                let n, m1,m2,m3,m4,m5,total,percentage;
+                function run(){
+                document.getElementById("t").style="display:block";
+                n=document.getElementById("name").value;
+                m1=Number(document.getElementById("a").value);
+                m2=Number(document.getElementById("b").value);
+                m3=Number(document.getElementById("c").value);
+                m4=Number(document.getElementById("d").value);
+                m5=Number(document.getElementById("e").value);
+                document.getElementById("f").innerHTML=n;
+                document.getElementById("g").innerHTML=Number(m1);
+                document.getElementById("h").innerHTML=Number(m2);
+                document.getElementById("i").innerHTML=Number(m3);
+                document.getElementById("j").innerHTML=Number(m4);
+                document.getElementById("k").innerHTML=Number(m5);
+                total=m1+m2+m3+m4+m5;
+                document.getElementById("l").innerHTML=Number(total);
+                percentage=total/500*100;
+                document.getElementById("m").innerHTML=Number(percentage);
+            }
+            </script>
+            </div>
+        </body>
+    </head>
+</html>
